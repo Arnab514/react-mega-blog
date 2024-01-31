@@ -97,7 +97,7 @@ export class Services {
         }
     }
 
-    //file uploading service
+    //file services
     async uploadFile (file) {
         try {
             await this.bucket.createFile(
