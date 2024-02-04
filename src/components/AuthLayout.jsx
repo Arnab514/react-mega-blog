@@ -1,10 +1,9 @@
 import React, {useState , useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 export default function Protected ({children , authentication = true}) {
 
-    const dispatch = useDispatch()
     const navigate = useNavigate()
     const authStatus = useSelector(state => state.auth.status)
     const [loader , setLoader] = useState(true)
@@ -21,4 +20,3 @@ export default function Protected ({children , authentication = true}) {
     
   return loader ? <h1> Loading... </h1> : <div> {children} </div> 
 }
-

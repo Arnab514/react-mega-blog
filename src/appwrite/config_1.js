@@ -1,7 +1,7 @@
 import config from "../config/config";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
-export class Services {
+export class Service {
     client = new Client;
     Databases;
     bucket;
@@ -135,5 +135,5 @@ export class Services {
     }
 }
 
-const services = new Services()
-export default services
+const service = new Service()
+export default service
