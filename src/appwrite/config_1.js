@@ -113,7 +113,7 @@ export class Service {
         }
     }
 
-    async uploadFile (fileId) {
+    async deleteFile (fileId) {
         try {
             await this.bucket.deleteFile(
                 config.appwriteBucketId,
