@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Input, RTE, Button, Select } from "../index";
 import appwriteService from "../../appwrite/config_1";
 
-function postForm({ post }) {
+function PostForm({ post }) {
   const { register, handleSubmit, setValue, getValues, watch } = useForm({
     defaultValues: {
       title: post?.title || "",
@@ -138,4 +138,4 @@ function postForm({ post }) {
   );
 }
 
-export default postForm;
+export default PostForm;
