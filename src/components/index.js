@@ -8,5 +8,6 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import PostCard from './PostCard'
 import PostForm from './postForm/PostForm'
+import Button from './Button'
 
-export {Footer , Header , Logo , Container , Logoutbtn , RTE , Login , Signup , PostCard , PostForm}
+export {Footer , Header , Logo , Container , Logoutbtn , RTE , Login , Signup , PostCard , PostForm , Button}
