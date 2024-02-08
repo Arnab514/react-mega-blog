@@ -1,4 +1,4 @@
-import authService from "../../appwrite/auth";
+import authService from "../../appwrite/config_1"
 import { logout } from "../../store/authSlice";
 import { useDispatch } from "react-redux";
 import React from 'react'
