@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import {Logo , Logoutbtn} from '../index'
-// import Logo from '../index'
 import Logo from '../index'
 import Logoutbtn from '../index'
 import Container from '../container/Container'  
@@ -46,7 +44,7 @@ function Header() {
       <Container>
         <nav className = 'flex'>
           <div className = 'mr-4'>
-            <Link to={'/'} >
+            <Link to = {'/'} >
               <Logo width = '70px'/>
             </Link>
           </div>

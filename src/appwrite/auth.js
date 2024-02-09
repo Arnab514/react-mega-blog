@@ -19,7 +19,7 @@ export class AuthService {
                 return this.login({email , password})
             } 
             else {
-                return userAccount
+                return userAccount;
             }
         } 
         catch (error) {

@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import authService from "../appwrite/config_1"
+import authService from "../appwrite/auth";
 import { login as storeLogin } from "../store/authSlice";
 import { useForm } from "react-hook-form";
-// import { Input } from "./Input";
-// import { Button } from "./Button";
 import Logo from "./index";
-import Input from './index'
-import Button from './index'
+import Input from "./index";
+import Button from "./index";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
-  const [register, handleSubmit] = useForm();
 
   const login = async (data) => {
     setError("");
@@ -22,10 +20,8 @@ function Login() {
       const session = await authService.login(data);
       if (session) {
         const userData = await authService.getCurrentUser();
-        if (userData) {
-          dispatch(storeLogin(userData));
-          navigate("/");
-        }
+        if (userData) dispatch(storeLogin(userData));
+        navigate("/");
       }
     } catch (error) {
       setError(error.message);

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import appwriteService from "../appwrite/config_1";
-import Button from '../components';
-import Container from '../components';
-import parse from 'html-react-parser';
+import Button from "../components/index";
+import Container from "../components/index";
+import parse from "html-react-parser";
 
 function Post() {
   const [post, setPost] = useState(null);
@@ -12,17 +12,16 @@ function Post() {
   const navigate = useNavigate();
 
   const userId = useSelector((state) => state.auth.useData);
-  const isAuthor = post && userId ? post.userId === userData.$id : false;
+  const isAuthor = post && userData ? post.userId === userData.$id : false;
 
   useEffect(() => {
     if (slug) {
-      appwriteService.getPost().then((post) => {
-        if (post) {
-          setPost(post);
-        } else navigate("/");
+      appwriteService.getPost(slug).then((post) => {
+        if (post) setPost(post);
+        else navigate("/");
       });
     } else navigate("/");
-  }, []);
+  }, [slug, navigate]);
 
   const deletePost = () => {
     appwriteService.deletePost(post.$id).then((status) => {
