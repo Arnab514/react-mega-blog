@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import appwriteService from "../appwrite/config_1";
-import Button from "../components/index";
-import Container from "../components/index";
+import {Button} from "../components/index";
+import {Container} from "../components/index";
 import parse from "html-react-parser";
 
 function Post() {

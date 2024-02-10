@@ -1,9 +1,9 @@
-import config from "../config/config";
+import config from '../config/config.js';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
-export class Service {
-    client = new Client;
-    Databases;
+export class Service{
+    client = new Client();
+    databases;
     bucket;
     
     constructor(){

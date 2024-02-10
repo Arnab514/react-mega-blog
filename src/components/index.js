@@ -12,7 +12,7 @@ import PostForm from "./postForm/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
-export default {
+export {
     Header,
     Footer,
     Container,
