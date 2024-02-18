@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import authService from "../appwrite/auth";
 import { login } from "../store/authSlice";
 import { useForm } from "react-hook-form";
@@ -29,19 +29,19 @@ function Signup() {
   }
 
 return (
-  <div className="flex items-center justify-center">
-          <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+  <div className="flex items-center justify-center w-full mt-12 p-4">
+          <div className={`mx-auto w-full max-w-lg dark:bg-gray-900 rounded-xl p-10 border border-black/10`}>
           <div className="mb-2 flex justify-center">
                   <span className="inline-block w-full max-w-[100px]">
                       <Logo width="100%" />
                   </span>
               </div>
-              <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
-              <p className="mt-2 text-center text-base text-black/60">
+              <h2 className="text-center text-2xl font-bold leading-tight dark:text-gray-100">Sign up to create account</h2>
+              <p className="mt-2 text-center text-base text-black/60 dark:text-gray-100">
                   Already have an account?&nbsp;
                   <Link
-                      to="/login"
-                      className="font-medium text-primary transition-all duration-200 hover:underline"
+                      to="/"
+                      className="text-blue-500 hover:text-blue-800 font-medium text-primary transition-all duration-200"
                   >
                       Sign In
                   </Link>
